@@ -1,0 +1,37 @@
+<!--Nos da la estructura hecha. 
+-Tendremos que agregar nuestros componentes y enlazarlos en los links
+-Creo los componentes pais1,pais2 y pais3 u los instanciamos en app.module.ts-->
+
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar>Menu</mat-toolbar>
+
+      <!--Sustituimos los links por el nombre que deseemos para que 
+      se pueda enlazar con la ruta y 
+      cambiar los href por routerLink porque estamos usando angular, no html-->
+    <mat-nav-list>
+      <a mat-list-item routerLink="/pais1">GRECIA</a>
+      <a mat-list-item routerLink="/pais2">ALEMANIA</a>
+      <a mat-list-item routerLink="/pais3">EMIRATOS ÁRABES</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>VACACIONES</span>
+    </mat-toolbar>
+
+      <!--Añadir router para poder d¡configurar este archivo con el anterior configurado en html-->
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

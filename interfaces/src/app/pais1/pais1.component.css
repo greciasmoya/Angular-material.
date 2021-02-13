@@ -1,0 +1,23 @@
+/*Configuramos nuestro css poniendo estilos a nuestros elementos del html*/
+
+body{background-color: rgb(25, 134, 161);}
+
+h1{font-size: 80px;
+color: rgb(169, 156, 187);
+font-family: fantasy;
+text-align: center;}
+
+h3{font-size: 40px;
+color: rgb(161, 249, 255);
+font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;}
+
+img{width: 400px;
+    ;}
+
+p{font-size: 15px;
+color: rgb(27, 27, 26);
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+text-align:left;
+margin-left: 5px;
+margin-right: 5px;
+margin-bottom: 15px;}
